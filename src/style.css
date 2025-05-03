@@ -1,5 +1,47 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+html{
+    background-color: green;
+}
 
-body{
-    background: white;
+.card {
+    width: 250px;
+    height: 400px;
+    margin:30px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: white;
+  }
+
+  .card-number {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+  }
+    
+  
+.card-symbol-top,
+.card-symbol-bottom {
+  font-size: 3rem;
+  height: 100px;
+  display: flex;
+}
+
+.card-symbol-top {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card-symbol-bottom {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#bottomIcon {
+  transform: rotate(180deg);
+  
 }
