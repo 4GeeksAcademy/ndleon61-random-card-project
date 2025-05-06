@@ -1,16 +1,27 @@
-html{
-    background-color: green;
+html, body {
+  height: 100%;
+}
+
+html {
+  background-image: url(https://w0.peakpx.com/wallpaper/271/670/HD-wallpaper-colorful-minimalist-artistic-shapes-abstract.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 .card {
     width: 250px;
     height: 400px;
-    margin:30px auto;
+    margin:100px auto;
+    margin-bottom: 20px;
     padding: 20px;
-    border: none;
+    border: 0.5px;
+    border-style: solid;
+    border-color: rgb(255, 217, 1);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    background-color: white;
+    box-shadow: 0 0 10px rgb(255, 217, 1);
+    background: linear-gradient( 40deg, rgb(0, 57, 171), rgb(255, 95, 67), rgb(255, 183, 1));
+    animation: changedCard 1s;
   }
 
   .card-number {
@@ -19,8 +30,9 @@ html{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: bold;
+    color: white;
   }
     
   
@@ -40,8 +52,65 @@ html{
   justify-content: flex-end;
   align-items: flex-end;
 }
+.symbol-red{
+  color: red;
+  
+}
+.symbol-green{
+  color: green;
+}
+.symbol-yellow{
+  color: rgb(207, 207, 0);
+}
+.symbol-pink{
+  color: rgb(255, 37, 74);
+}
 
 #bottomIcon {
   transform: rotate(180deg);
   
+}
+#button{
+  background-color: rgb(255, 0, 89);
+  color: white;
+  margin: 50px auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: moveInButton 1s ease-out;
+}
+
+#button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(250, 108, 0, 0.355);
+}
+
+@keyframes moveInButton{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes cardFadeIn{
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-card {
+  animation: cardFadeIn 1s ease-in-out;
 }
